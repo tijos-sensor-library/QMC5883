@@ -3,7 +3,7 @@ package tijos.framework.sensor.qmc5883;
 import java.io.IOException;
 
 import tijos.framework.devicecenter.TiI2CMaster;
-import tijos.util.BigBitConverter;
+import tijos.framework.util.BigBitConverter;
 
 /**
  * QMC5883 compass module driver for TiJOS based on 
@@ -291,7 +291,7 @@ public class TiQMC5883 {
 		return BigBitConverter.ToInt16(data, 0);
 	}
 
-	// The map function implementation from the Arduino¡¯s
+	// The map function implementation from the Arduinoâ€™s
 	private float map(float x, float in_min, float in_max, int out_min, int out_max) {
 		return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 	}

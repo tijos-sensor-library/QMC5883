@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import tijos.framework.devicecenter.TiI2CMaster;
 
-import tijos.util.Delay;
+import tijos.framework.util.Delay;
 
 /**
  * Hello world!
@@ -16,12 +16,12 @@ public class TiQMC5883Sample
 	public static void main(String[] args) {
 		try {
 			/*
-			 * 定义使用的TiI2CMaster port
+			 *TiI2CMaster port
 			 */
 			int i2cPort0 = 0;
 
 			/*
-			 * 资源分配， 将i2cPort0分配给TiI2CMaster对象i2c0
+			 * Open the i2c port 
 			 */
 			TiI2CMaster i2c0 = TiI2CMaster.open(i2cPort0);
 
